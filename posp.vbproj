@@ -1,0 +1,955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{C0D63219-870A-4068-A81A-8C28AEEA8DDB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>posp</RootNamespace>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlexGroup.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form Cash In Out List.designer.vb">
+      <DependentUpon>Form Cash In Out List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Cash In Out List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Cash In Out.designer.vb">
+      <DependentUpon>Form Cash In Out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Cash In Out.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Check In Room.designer.vb">
+      <DependentUpon>Form Check In Room.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Check In Room.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Check In-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Check In.Designer-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Check In.Designer.vb">
+      <DependentUpon>Form Check In.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Check In.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Check Saldo.Designer.vb">
+      <DependentUpon>Form Check Saldo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Check Saldo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Create New Cust.Designer.vb">
+      <DependentUpon>Form Create New Cust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Create New Cust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Customer Display.Designer.vb">
+      <DependentUpon>Form Customer Display.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Customer Display.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Customer Pick.Designer.vb">
+      <DependentUpon>Form Customer Pick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Customer Pick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Daftar Customer.designer.vb">
+      <DependentUpon>Form Daftar Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Daftar Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Debt Payment List.Designer.vb">
+      <DependentUpon>Form Debt Payment List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Debt Payment List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Debt Payment Pick.Designer.vb">
+      <DependentUpon>Form Debt Payment Pick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Debt Payment Pick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Debt Payment.Designer.vb">
+      <DependentUpon>Form Debt Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Debt Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Delivery.Designer.vb">
+      <DependentUpon>Form Delivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Delivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Detail Menu.designer.vb">
+      <DependentUpon>Form Detail Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Detail Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Dialog Notes.Designer.vb">
+      <DependentUpon>Form Dialog Notes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Dialog Notes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Edit Detail Paket.designer.vb">
+      <DependentUpon>Form Edit Detail Paket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Edit Detail Paket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Edit Menu On Makeorder.designer.vb">
+      <DependentUpon>Form Edit Menu On Makeorder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Edit Menu On Makeorder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice Check In.Designer.vb">
+      <DependentUpon>Form Invoice Check In.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Invoice Check In.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice Image-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice Image.Designer-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice Image.Designer.vb">
+      <DependentUpon>Form Invoice Image.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Invoice Image.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice List.Designer.vb">
+      <DependentUpon>Form Invoice List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Invoice List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice Make Bill.Designer.vb">
+      <DependentUpon>Form Invoice Make Bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Invoice Make Bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice.designer-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Invoice.designer.vb">
+      <DependentUpon>Form Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Join Bill.Designer.vb">
+      <DependentUpon>Form Join Bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Join Bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Kitchen Monitor-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Kitchen Monitor.Designer-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Kitchen Monitor.Designer.vb">
+      <DependentUpon>Form Kitchen Monitor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Kitchen Monitor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Bill Ask Mount.Designer.vb">
+      <DependentUpon>Form Make Bill Ask Mount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Bill Ask Mount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Bill Discount.Designer.vb">
+      <DependentUpon>Form Make Bill Discount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Bill Discount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Bill Room.designer.vb">
+      <DependentUpon>Form Make Bill Room.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Bill Room.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Bill.Designer.vb">
+      <DependentUpon>Form Make Bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Bill2.Designer.vb">
+      <DependentUpon>Form Make Bill2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Bill2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order Image-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order Image-2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order Image.Designer-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order Image.Designer-2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order Image.Designer.vb">
+      <DependentUpon>Form Make Order Image.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Order Image.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order List.Designer.vb">
+      <DependentUpon>Form Make Order List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Order List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order Mobile.Designer.vb">
+      <DependentUpon>Form Make Order Mobile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Order Mobile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order.Designer-1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Make Order.Designer.vb">
+      <DependentUpon>Form Make Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Make Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Move Menu.Designer.vb">
+      <DependentUpon>Form Move Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Move Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Move Table.Designer.vb">
+      <DependentUpon>Form Move Table.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Move Table.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Payment.Designer.vb">
+      <DependentUpon>Form Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Pop Up Open Menu.Designer.vb">
+      <DependentUpon>Form Pop Up Open Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Pop Up Open Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Popup Jumlah.Designer.vb">
+      <DependentUpon>Form Popup Jumlah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Popup Jumlah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation Down Payment.Designer.vb">
+      <DependentUpon>Form Reservation Down Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation Down Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation Invoice.designer.vb">
+      <DependentUpon>Form Reservation Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation List Show.designer.vb">
+      <DependentUpon>Form Reservation List Show.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation List Show.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation List.Designer.vb">
+      <DependentUpon>Form Reservation List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation Make Order Image.Designer.vb">
+      <DependentUpon>Form Reservation Make Order Image.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation Make Order Image.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation Make Order.designer.vb">
+      <DependentUpon>Form Reservation Make Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation Make Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation Pick.Designer.vb">
+      <DependentUpon>Form Reservation Pick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation Pick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Reservation Rent.Designer.vb">
+      <DependentUpon>Form Reservation Rent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Reservation Rent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Scaner Barcode - Copy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Scaner Barcode.Designer - Copy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Scaner Barcode.Designer.vb">
+      <DependentUpon>Form Scaner Barcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Scaner Barcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Select Printer.Designer.vb">
+      <DependentUpon>Form Select Printer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Select Printer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Split Bill.Designer.vb">
+      <DependentUpon>Form Split Bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Split Bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form User Authorize Dialog.Designer.vb">
+      <DependentUpon>Form User Authorize Dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form User Authorize Dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form View Notes.Designer.vb">
+      <DependentUpon>Form View Notes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form View Notes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Test_Gambar.Designer.vb">
+      <DependentUpon>Form_Test_Gambar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Test_Gambar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Template 58mm\Cash In Out58.Designer.vb">
+      <DependentUpon>Cash In Out58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Cash In Out58.vb" />
+    <Compile Include="Report Template 58mm\Kitchen List58.Designer.vb">
+      <DependentUpon>Kitchen List58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Kitchen List58.vb" />
+    <Compile Include="Report Template 58mm\Make Bill Delivery58.designer.vb">
+      <DependentUpon>Make Bill Delivery58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Bill Delivery58.vb" />
+    <Compile Include="Report Template 58mm\Make Bill Payment58.designer.vb">
+      <DependentUpon>Make Bill Payment58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Bill Payment58.vb" />
+    <Compile Include="Report Template 58mm\Make Bill Sub Item58.Designer.vb">
+      <DependentUpon>Make Bill Sub Item58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Bill Sub Item58.vb" />
+    <Compile Include="Report Template 58mm\Make Bill258.Designer.vb">
+      <DependentUpon>Make Bill258.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Bill258.vb" />
+    <Compile Include="Report Template 58mm\Make Bill58.Designer.vb">
+      <DependentUpon>Make Bill58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Bill58.vb" />
+    <Compile Include="Report Template 58mm\Make Order 58.Designer.vb">
+      <DependentUpon>Make Order 58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Order 58.vb" />
+    <Compile Include="Report Template 58mm\Make Order Split58.Designer.vb">
+      <DependentUpon>Make Order Split58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Order Split58.vb" />
+    <Compile Include="Report Template 58mm\Make Order Sub Item Split58.Designer.vb">
+      <DependentUpon>Make Order Sub Item Split58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Order Sub Item Split58.vb" />
+    <Compile Include="Report Template 58mm\Make Order Sub Item58.Designer.vb">
+      <DependentUpon>Make Order Sub Item58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Order Sub Item58.vb" />
+    <Compile Include="Report Template 58mm\Make Payment Change58.Designer.vb">
+      <DependentUpon>Make Payment Change58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Make Payment Change58.vb" />
+    <Compile Include="Report Template 58mm\Payment Sub Payment58.Designer.vb">
+      <DependentUpon>Payment Sub Payment58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Payment Sub Payment58.vb" />
+    <Compile Include="Report Template 58mm\Payment58.Designer.vb">
+      <DependentUpon>Payment58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Payment58.vb" />
+    <Compile Include="Report Template 58mm\Reservation 58.Designer.vb">
+      <DependentUpon>Reservation 58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Reservation 58.vb" />
+    <Compile Include="Report Template 58mm\Reservation Sub Item 58.Designer.vb">
+      <DependentUpon>Reservation Sub Item 58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Reservation Sub Item 58.vb" />
+    <Compile Include="Report Template 58mm\Reservation Sub Payment 58.Designer.vb">
+      <DependentUpon>Reservation Sub Payment 58.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template 58mm\Reservation Sub Payment 58.vb" />
+    <Compile Include="Report Template\arNotaReservastionLebar.Designer.vb">
+      <DependentUpon>arNotaReservastionLebar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\arNotaReservastionLebar.vb" />
+    <Compile Include="Report Template\Cash In Out.Designer.vb">
+      <DependentUpon>Cash In Out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Cash In Out.vb" />
+    <Compile Include="Report Template\Checkin.designer.vb">
+      <DependentUpon>Checkin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Checkin.vb" />
+    <Compile Include="Report Template\Check_Saldo.Designer.vb">
+      <DependentUpon>Check_Saldo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Check_Saldo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report Template\Kitchen List.Designer.vb">
+      <DependentUpon>Kitchen List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Kitchen List.vb" />
+    <Compile Include="Report Template\Make Bill Delivery.designer.vb">
+      <DependentUpon>Make Bill Delivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill Delivery.vb" />
+    <Compile Include="Report Template\Make Bill Payment.designer.vb">
+      <DependentUpon>Make Bill Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill Payment.vb" />
+    <Compile Include="Report Template\Make Bill Room Gift.designer.vb">
+      <DependentUpon>Make Bill Room Gift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill Room Gift.vb" />
+    <Compile Include="Report Template\Make Bill Room.designer.vb">
+      <DependentUpon>Make Bill Room.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill Room.vb" />
+    <Compile Include="Report Template\Make Bill Sub Item Room.designer.vb">
+      <DependentUpon>Make Bill Sub Item Room.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill Sub Item Room.vb" />
+    <Compile Include="Report Template\Make Bill Sub Item.Designer.vb">
+      <DependentUpon>Make Bill Sub Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill Sub Item.vb" />
+    <Compile Include="Report Template\Make Bill.Designer.vb">
+      <DependentUpon>Make Bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill.vb" />
+    <Compile Include="Report Template\Make Bill2.Designer.vb">
+      <DependentUpon>Make Bill2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Bill2.vb" />
+    <Compile Include="Report Template\Make Order Split.Designer.vb">
+      <DependentUpon>Make Order Split.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Order Split.vb" />
+    <Compile Include="Report Template\Make Order Sub Item Split.Designer.vb">
+      <DependentUpon>Make Order Sub Item Split.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Order Sub Item Split.vb" />
+    <Compile Include="Report Template\Make Order Sub Item-1.vb" />
+    <Compile Include="Report Template\Make Order Sub Item.Designer-1.vb" />
+    <Compile Include="Report Template\Make Order Sub Item.Designer.vb">
+      <DependentUpon>Make Order Sub Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Order Sub Item.vb" />
+    <Compile Include="Report Template\Make Order-1.vb" />
+    <Compile Include="Report Template\Make Order.Designer-1.vb" />
+    <Compile Include="Report Template\Make Order.Designer.vb">
+      <DependentUpon>Make Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Order.vb" />
+    <Compile Include="Report Template\Make Payment Change.Designer.vb">
+      <DependentUpon>Make Payment Change.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Make Payment Change.vb" />
+    <Compile Include="Report Template\Payment Sub Payment.Designer.vb">
+      <DependentUpon>Payment Sub Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Payment Sub Payment.vb" />
+    <Compile Include="Report Template\Payment.Designer.vb">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Payment.vb" />
+    <Compile Include="Report Template\Reservation Kitchen List.Designer.vb">
+      <DependentUpon>Reservation Kitchen List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Reservation Kitchen List.vb" />
+    <Compile Include="Report Template\Reservation Rent.Designer.vb">
+      <DependentUpon>Reservation Rent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Reservation Rent.vb" />
+    <Compile Include="Report Template\Reservation Sub Item Lebar.Designer.vb">
+      <DependentUpon>Reservation Sub Item Lebar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Reservation Sub Item Lebar.vb" />
+    <Compile Include="Report Template\Reservation Sub Item.Designer.vb">
+      <DependentUpon>Reservation Sub Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Reservation Sub Item.vb" />
+    <Compile Include="Report Template\Reservation Sub Payment.Designer.vb">
+      <DependentUpon>Reservation Sub Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Reservation Sub Payment.vb" />
+    <Compile Include="Report Template\Reservation.Designer.vb">
+      <DependentUpon>Reservation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\Reservation.vb" />
+    <Compile Include="Report Template\sr Bill Logo.Designer.vb">
+      <DependentUpon>sr Bill Logo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\sr Bill Logo.vb" />
+    <Compile Include="Report Template\srMBTransMod.designer.vb">
+      <DependentUpon>srMBTransMod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Template\srMBTransMod.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form Cash In Out List.resx">
+      <DependentUpon>Form Cash In Out List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Cash In Out.resx">
+      <DependentUpon>Form Cash In Out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Check In Room.resx">
+      <DependentUpon>Form Check In Room.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Check In-1.resx">
+      <DependentUpon>Form Check In-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Check In.resx">
+      <DependentUpon>Form Check In.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Check Saldo.resx">
+      <DependentUpon>Form Check Saldo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Create New Cust.resx">
+      <DependentUpon>Form Create New Cust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Customer Display.resx">
+      <DependentUpon>Form Customer Display.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Customer Pick.resx">
+      <DependentUpon>Form Customer Pick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Daftar Customer.resx">
+      <DependentUpon>Form Daftar Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Debt Payment List.resx">
+      <DependentUpon>Form Debt Payment List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Debt Payment Pick.resx">
+      <DependentUpon>Form Debt Payment Pick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Debt Payment.resx">
+      <DependentUpon>Form Debt Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Delivery.resx">
+      <DependentUpon>Form Delivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Detail Menu.resx">
+      <DependentUpon>Form Detail Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Dialog Notes.resx">
+      <DependentUpon>Form Dialog Notes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Edit Detail Paket.resx">
+      <DependentUpon>Form Edit Detail Paket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Edit Menu On Makeorder.resx">
+      <DependentUpon>Form Edit Menu On Makeorder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Invoice Check In.resx">
+      <DependentUpon>Form Invoice Check In.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Invoice Image-1.resx">
+      <DependentUpon>Form Invoice Image-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Invoice Image.resx">
+      <DependentUpon>Form Invoice Image.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Invoice List.resx">
+      <DependentUpon>Form Invoice List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Invoice Make Bill.resx">
+      <DependentUpon>Form Invoice Make Bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Invoice-1.resx">
+      <DependentUpon>Form Invoice-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Invoice.resx">
+      <DependentUpon>Form Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Join Bill.resx">
+      <DependentUpon>Form Join Bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Kitchen Monitor-1.resx">
+      <DependentUpon>Form Kitchen Monitor-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Kitchen Monitor.resx">
+      <DependentUpon>Form Kitchen Monitor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Bill Ask Mount.resx">
+      <DependentUpon>Form Make Bill Ask Mount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Bill Discount.resx">
+      <DependentUpon>Form Make Bill Discount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Bill Room.resx">
+      <DependentUpon>Form Make Bill Room.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Bill.resx">
+      <DependentUpon>Form Make Bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Bill2.resx">
+      <DependentUpon>Form Make Bill2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Order Image-1.resx">
+      <DependentUpon>Form Make Order Image-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Order Image-2.resx">
+      <DependentUpon>Form Make Order Image-2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Order Image.resx">
+      <DependentUpon>Form Make Order Image.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Order List.resx">
+      <DependentUpon>Form Make Order List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Order Mobile.resx">
+      <DependentUpon>Form Make Order Mobile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Order-1.resx">
+      <DependentUpon>Form Make Order-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Make Order.resx">
+      <DependentUpon>Form Make Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Move Menu.resx">
+      <DependentUpon>Form Move Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Move Table.resx">
+      <DependentUpon>Form Move Table.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Payment.resx">
+      <DependentUpon>Form Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Pop Up Open Menu.resx">
+      <DependentUpon>Form Pop Up Open Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Popup Jumlah.resx">
+      <DependentUpon>Form Popup Jumlah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation Down Payment.resx">
+      <DependentUpon>Form Reservation Down Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation Invoice.resx">
+      <DependentUpon>Form Reservation Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation List Show.resx">
+      <DependentUpon>Form Reservation List Show.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation List.resx">
+      <DependentUpon>Form Reservation List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation Make Order Image.resx">
+      <DependentUpon>Form Reservation Make Order Image.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation Make Order.resx">
+      <DependentUpon>Form Reservation Make Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation Pick.resx">
+      <DependentUpon>Form Reservation Pick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Reservation Rent.resx">
+      <DependentUpon>Form Reservation Rent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Scaner Barcode - Copy.resx">
+      <DependentUpon>Form Scaner Barcode - Copy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Scaner Barcode.resx">
+      <DependentUpon>Form Scaner Barcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Select Printer.resx">
+      <DependentUpon>Form Select Printer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Split Bill.resx">
+      <DependentUpon>Form Split Bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form User Authorize Dialog.resx">
+      <DependentUpon>Form User Authorize Dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form View Notes.resx">
+      <DependentUpon>Form View Notes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Test_Gambar.resx">
+      <DependentUpon>Form_Test_Gambar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Cash In Out58.resx">
+      <DependentUpon>Cash In Out58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Kitchen List58.resx">
+      <DependentUpon>Kitchen List58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Bill Delivery58.resx">
+      <DependentUpon>Make Bill Delivery58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Bill Payment58.resx">
+      <DependentUpon>Make Bill Payment58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Bill Sub Item58.resx">
+      <DependentUpon>Make Bill Sub Item58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Bill258.resx">
+      <DependentUpon>Make Bill258.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Bill58.resx">
+      <DependentUpon>Make Bill58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Order 58.resx">
+      <DependentUpon>Make Order 58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Order Split58.resx">
+      <DependentUpon>Make Order Split58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Order Sub Item Split58.resx">
+      <DependentUpon>Make Order Sub Item Split58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Order Sub Item58.resx">
+      <DependentUpon>Make Order Sub Item58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Make Payment Change58.resx">
+      <DependentUpon>Make Payment Change58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Payment Sub Payment58.resx">
+      <DependentUpon>Payment Sub Payment58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Payment58.resx">
+      <DependentUpon>Payment58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Reservation 58.resx">
+      <DependentUpon>Reservation 58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Reservation Sub Item 58.resx">
+      <DependentUpon>Reservation Sub Item 58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template 58mm\Reservation Sub Payment 58.resx">
+      <DependentUpon>Reservation Sub Payment 58.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\arNotaReservastionLebar.resx">
+      <DependentUpon>arNotaReservastionLebar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Cash In Out.resx">
+      <DependentUpon>Cash In Out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Checkin.resx">
+      <DependentUpon>Checkin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Kitchen List.resx">
+      <DependentUpon>Kitchen List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill Delivery.resx">
+      <DependentUpon>Make Bill Delivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill Payment.resx">
+      <DependentUpon>Make Bill Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill Room Gift.resx">
+      <DependentUpon>Make Bill Room Gift.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill Room.resx">
+      <DependentUpon>Make Bill Room.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill Sub Item Room.resx">
+      <DependentUpon>Make Bill Sub Item Room.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill Sub Item.resx">
+      <DependentUpon>Make Bill Sub Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill.resx">
+      <DependentUpon>Make Bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Bill2.resx">
+      <DependentUpon>Make Bill2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Order Split.resx">
+      <DependentUpon>Make Order Split.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Order Sub Item Split.resx">
+      <DependentUpon>Make Order Sub Item Split.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Order Sub Item-1.resx">
+      <DependentUpon>Make Order Sub Item-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Order Sub Item.resx">
+      <DependentUpon>Make Order Sub Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Order-1.resx">
+      <DependentUpon>Make Order-1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Order.resx">
+      <DependentUpon>Make Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Make Payment Change.resx">
+      <DependentUpon>Make Payment Change.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Payment Sub Payment.resx">
+      <DependentUpon>Payment Sub Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Payment.resx">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Reservation Kitchen List.resx">
+      <DependentUpon>Reservation Kitchen List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Reservation Rent.resx">
+      <DependentUpon>Reservation Rent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Reservation Sub Item Lebar.resx">
+      <DependentUpon>Reservation Sub Item Lebar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Reservation Sub Item.resx">
+      <DependentUpon>Reservation Sub Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Reservation Sub Payment.resx">
+      <DependentUpon>Reservation Sub Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\Reservation.resx">
+      <DependentUpon>Reservation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\sr Bill Logo.resx">
+      <DependentUpon>sr Bill Logo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Template\srMBTransMod.resx">
+      <DependentUpon>srMBTransMod.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
